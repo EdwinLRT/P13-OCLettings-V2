@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Page Not Found{% endblock title %}
+
+{% block content %}
+<div class="container text-center mt-5">
+    <img src="{% static 'assets/img/logo.png' %}" alt="logo" width="200" height="200" class="mb-3">
+    <h1 class="display-4">Oups! Page non trouvée.</h1>
+    <p class="lead">Désolé, la page que vous recherchez n'existe pas.</p>
+    <a class="btn btn-primary" href="{% url 'index' %}">Retour à l'accueil</a>
+</div>
+{% endblock content %}
