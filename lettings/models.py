@@ -60,3 +60,5 @@ class Letting(models.Model):
             str: The title of the letting.
         """
         return self.title
+
+

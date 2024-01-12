@@ -1,11 +1,21 @@
+# oc_lettings_site/urls.py
 from django.urls import include, path
 from . import views
+from .views import error_500
+from django.contrib import admin
 
-app_name = 'oc_lettings_site'
+handler500 = 'oc_lettings_site.views.custom_error_500'
+
+
+def trigger_error(request):
+    division_by_zero = 1 / 0
+
 
 urlpatterns = [
     path('', views.index, name='index'),
-    path('profiles/', include('profiles.urls', namespace='profiles')),
-    path('lettings/', include('lettings.urls', namespace='lettings')),
+    path('admin/', admin.site.urls),
+    path('profiles/', include('profiles.urls')),
+    path('lettings/', include('lettings.urls')),
+    path('error-500/', views.error_500, name='error-500'),
+    path('sentry-debug/', trigger_error),
 ]
-

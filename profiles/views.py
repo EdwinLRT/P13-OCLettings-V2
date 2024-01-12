@@ -1,5 +1,10 @@
-from django.shortcuts import render
 from .models import Profile
+import logging
+from django.shortcuts import render, get_object_or_404
+from .models import Profile
+from django.http import Http404
+
+logger = logging.getLogger(__name__)
 
 
 def index(request):
@@ -35,6 +40,10 @@ def profile(request, username):
     Returns:
         HttpResponse: An HttpResponse object with the rendered profile page.
     """
-    profile = Profile.objects.get(user__username=username)
-    context = {'profile': profile}
-    return render(request, 'profiles/profile.html', context)
+    try:
+        profile = Profile.objects.get(user__username=username)
+        context = {'profile': profile}
+        return render(request, 'profiles/profile.html', context)
+    except Profile.DoesNotExist:
+        logger.error(f'Profile with id {username} not found')
+        raise Http404("Profile not found")

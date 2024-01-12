@@ -4,31 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Flake8 clean">
+      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lettings/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lettings/tests/test_models_lettings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lettings/tests/test_views_lettings.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oc_lettings_site/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/oc_lettings_site/tests/test_views_oc_lettings_site.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/profiles/tests/test_views_profiles.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/P13-OCLettings.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/P13-OCLettings.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lettings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/templates/lettings/letting.html" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/templates/lettings/letting.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/templates/lettings/lettings_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/templates/lettings/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lettings/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/.coveragerc" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lettings/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/migrations/0002_auto_20231225_2129.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/migrations/0002_delete_old_tables.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oc_lettings_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/oc_lettings_site/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/oc_lettings_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oc_lettings_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/templates/profiles/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/templates/profiles/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/templates/profiles/profiles_index.html" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/templates/profiles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/templates/profiles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/templates/profiles/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/profiles/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/profiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/website.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/website.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +43,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -54,20 +55,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -111,11 +112,24 @@
       <updated>1703005225647</updated>
       <workItem from="1703005229232" duration="134000" />
       <workItem from="1703018096324" duration="5656000" />
-      <workItem from="1703416540370" duration="15571000" />
+      <workItem from="1703416540370" duration="25562000" />
+      <workItem from="1705006387180" duration="4026000" />
     </task>
+    <task id="LOCAL-00001" summary="Flake8 clean">
+      <created>1704403072317</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1704403072317</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Flake8 clean" />
+    <option name="LAST_COMMIT_MESSAGE" value="Flake8 clean" />
   </component>
 </project>
