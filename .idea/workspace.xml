@@ -4,28 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Flake8 clean">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lettings/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lettings/tests/test_models_lettings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lettings/tests/test_views_lettings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oc_lettings_site/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/oc_lettings_site/tests/test_views_oc_lettings_site.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/profiles/tests/test_views_profiles.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pytest.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/P13-OCLettings.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/P13-OCLettings.iml" afterDir="false" />
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Test 80 ok - Sentry logs ok">
+      <change afterPath="$PROJECT_DIR$/.circlecy/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/.coveragerc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/oc_lettings_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/templates/profiles/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/templates/profiles/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,7 +95,7 @@
       <workItem from="1703005229232" duration="134000" />
       <workItem from="1703018096324" duration="5656000" />
       <workItem from="1703416540370" duration="25562000" />
-      <workItem from="1705006387180" duration="4026000" />
+      <workItem from="1705006387180" duration="8127000" />
     </task>
     <task id="LOCAL-00001" summary="Flake8 clean">
       <created>1704403072317</created>
@@ -122,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1704403072317</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Test 80 ok - Sentry logs ok">
+      <created>1705064370159</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1705064370159</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +119,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Flake8 clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="Flake8 clean" />
+    <MESSAGE value="Test 80 ok - Sentry logs ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test 80 ok - Sentry logs ok" />
   </component>
 </project>
