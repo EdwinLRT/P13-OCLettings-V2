@@ -59,3 +59,4 @@ Thumbs.db
 *.csv
 *.json
 node_modules/
+/flake-report/
