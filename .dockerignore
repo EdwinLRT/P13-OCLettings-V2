@@ -1,10 +1,82 @@
-__pycache__
-.git
+# Exclude the virtual environment directory
+venv/
+
+# Exclude the .git directory and git ignore files
+.git/
 .gitignore
-venv
+
+# Exclude local development files
 *.pyc
+__pycache__/
 *.pyo
 *.pyd
-.pytest_cache
+
+# Exclude test coverage reports and pytest cache
+htmlcov/
 .coverage
-htmlcov
+.coverage.*
+.flake-report/
+.pytest_cache/
+
+# Exclude database migrations for development
+*/migrations/
+!*/migrations/__init__.py  # Include the __init__.py to keep migrations recognized as a package
+
+# Exclude development configuration files and environment variables
+*.env
+*.log
+*.ini
+*.cfg
+
+# Exclude any other unnecessary files or directories
+node_modules/
+__pycache__/
+.vscode/
+.idea/
+*.swp
+*~
+.DS_Store
+
+# Exclude OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Exclude potential test and benchmark scripts
+/tests/
+/benchmarks/
+
+# Exclude build and distribution directory
+/build/
+/dist/
+eggs/
+parts/
+bin/
+var/
+sdist/
+wheel/
+*.egg-info/
+.installed.cfg
+lib/
+lib64/
+
+# Exclude PyCharm projects files
+.idea/
+
+# Exclude Jupyter Notebook files
+.ipynb_checkpoints
+*.ipynb
+
+# Exclude media and static if they are generated
+/media/
+/static/
+/staticfiles/
+
+# Docker specific
+.dockerignore
+Dockerfile
+*docker-compose*.yml

@@ -15,9 +15,3 @@ def test_error_500_view(client):
     assert "Une erreur serveur" in response.content.decode()
 
 
-#@pytest.mark.django_db
-#def test_custom_error_500_view(client):
-#    url = reverse('custom_error_500')
-#    response = client.get(url)
-#    assert response.status_code == 500
-#    assert 'Une erreur serveur' in response.content.decode()

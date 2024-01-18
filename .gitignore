@@ -1,3 +1,61 @@
-**/__pycache__
-*.pyc
-venv
+# Byte-compiled / optimized / DLL files
+**/__pycache__/
+*.py[cod]  # [c] byte-code, [o] optimized byte-code, [d] debug byte-code
+*.so       # Shared library (Linux)
+*.dylib    # Shared library (macOS)
+*.dll      # Shared library (Windows)
+
+# Virtual environment
+venv/
+*.virtualenv
+env/
+ENV/
+
+# Environment variables
+.env
+.env.*
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+
+# Flake8 reports
+flake-report/
+
+# Pytest cache
+.pytest_cache/
+
+# Development tools
+*.swp
+*~
+.idea/
+.vscode/
+*.sublime-workspace
+
+# Files that might appear on the root folder
+/.coverage
+/.pytest_cache
+/website.sqlite3
+/db.sqlite3
+
+# Docker container files
+.dockerignore
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# PyCharm projects files
+/.idea/
+
+# Other files and folders to ignore
+*.log
+*.csv
+*.json
+node_modules/

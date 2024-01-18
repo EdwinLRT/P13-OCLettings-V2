@@ -4,7 +4,7 @@ from . import views
 from .views import error_500
 from django.contrib import admin
 
-handler500 = 'oc_lettings_site.views.custom_error_500'
+handler500 = 'oc_lettings_site.views.error_500'
 
 
 def trigger_error(request):

@@ -1,15 +1,20 @@
-FROM python:3.11
+# Utiliser une image de base Python officielle
+FROM python:3.11-slim
+
+# Définir l'environnement en non-interactif (pour automatiser)
+ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app
 
-ARG DJANGO_SECRET_KEY
-ENV DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY
+# Copier le fichier des dépendances et installer les dépendances
+COPY requirements.txt /app/
+RUN pip install --upgrade pip && pip install -r requirements.txt
 
-COPY requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
-COPY . .
+# Copier le projet dans le répertoire de travail
+COPY . /app/
 
-RUN python manage.py collectstatic --noinput
+# Exposer le port sur lequel l'application va tourner
 EXPOSE 8000
 
-CMD ["gunicorn", "oc_lettings_site.wsgi:application", "--bind", "0.0.0.0:8000"]
+# Lancer le serveur Django avec gunicorn (par exemple)
+CMD ["gunicorn", "-b", "0.0.0.0:8000", "oc_lettings_site.wsgi:application"]
