@@ -2,7 +2,12 @@ version: '3.8'
 
 services:
   web:
-    build: .
+    build:
+      context: .
+      args:
+        - DJANGO_SECRET_KEY
+    env_file:
+      - .env
     command: gunicorn oc_lettings_site.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
