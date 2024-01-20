@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Setup Docker+circleCI">
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Setup docker">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.coverage" beforeDir="false" afterPath="$PROJECT_DIR$/.coverage" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,7 +123,7 @@
       <workItem from="1703018096324" duration="5656000" />
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
-      <workItem from="1705617126178" duration="5228000" />
+      <workItem from="1705617126178" duration="6717000" />
     </task>
     <task id="LOCAL-00001" summary="Flake8 clean">
       <created>1704403072317</created>
@@ -154,7 +153,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705608923436</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Setup docker">
+      <created>1705673939714</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1705673939714</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -164,6 +170,7 @@
     <MESSAGE value="Flake8 clean" />
     <MESSAGE value="Test 80 ok - Sentry logs ok" />
     <MESSAGE value="Setup Docker+circleCI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup Docker+circleCI" />
+    <MESSAGE value="Setup docker" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup docker" />
   </component>
 </project>
