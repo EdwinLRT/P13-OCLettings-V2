@@ -28,4 +28,4 @@ RUN python manage.py collectstatic --noinput
 EXPOSE 8000
 
 # Lancer le serveur Django avec gunicorn (par exemple)
-CMD ["gunicorn", "-b", "0.0.0.0:8000", "oc_lettings_site.wsgi:application"]
+CMD ["gunicorn", "-b", "0.0.0.0:$PORT", "oc_lettings_site.wsgi:application"]
