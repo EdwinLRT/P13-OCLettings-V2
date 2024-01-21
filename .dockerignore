@@ -19,7 +19,6 @@ htmlcov/
 .pytest_cache/
 
 # Exclude development configuration files and environment variables
-*.env
 *.log
 *.ini
 *.cfg
