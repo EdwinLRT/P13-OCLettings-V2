@@ -4,17 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Setup CircleCI">
-      <change beforePath="$PROJECT_DIR$/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/conftest.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/tests/test_models_lettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/tests/test_models_lettings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/tests/test_views_lettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/tests/test_views_lettings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lettings/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/lettings/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/tests/test_views_oc_lettings_site.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/tests/test_views_oc_lettings_site.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/oc_lettings_site/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/tests/test_views_profiles.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/tests/test_views_profiles.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/profiles/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/profiles/views.py" afterDir="false" />
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Cleaning code">
+      <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +122,7 @@
       <workItem from="1703018096324" duration="5656000" />
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
-      <workItem from="1705617126178" duration="12018000" />
+      <workItem from="1705617126178" duration="12604000" />
     </task>
     <task id="LOCAL-00001" summary="Flake8 clean">
       <created>1704403072317</created>
@@ -230,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705849885433</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Cleaning code">
+      <created>1705850404511</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1705850404511</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +241,7 @@
     <MESSAGE value="Setup Docker+circleCI" />
     <MESSAGE value="Setup docker" />
     <MESSAGE value="Setup CircleCI" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup CircleCI" />
+    <MESSAGE value="Cleaning code" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cleaning code" />
   </component>
 </project>

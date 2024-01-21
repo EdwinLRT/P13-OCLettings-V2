@@ -10,23 +10,35 @@ jobs:
       - image: circleci/python:3.10
     steps:
       - checkout
+
+      # Restauration du cache (si vous voulez l'ajouter)
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "requirements.txt" }}
+            - v1-dependencies-
+
       - python/install-packages:
           pkg-manager: pip
+
+      # Linting
       - run:
           name: Linting
           command: |
             pip install flake8
             flake8 .
-      - run:
-          name: Run Tests
-          command: |
-            pip install pytest pytest-cov
-            pytest --cov=.
+
+      # Exécution des tests avec vérification de la couverture
       - run:
           name: Run Tests and Check Coverage
           command: |
             pip install pytest pytest-cov
             pytest --cov=. --cov-report=term --cov-fail-under=80
+
+      # Sauvegarde du cache (si vous voulez l'ajouter)
+      - save_cache:
+          paths:
+            - ./venv
+          key: v1-dependencies-{{ checksum "requirements.txt" }}
 
   build-docker-image:
     docker:
