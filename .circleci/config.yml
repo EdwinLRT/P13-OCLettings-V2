@@ -47,6 +47,10 @@ jobs:
       - checkout
       - setup_remote_docker
       - run:
+          name: Echo DJANGO_SECRET_KEY
+          command: |
+            echo "DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY"
+      - run:
           name: Build Docker Image
           command: |
             docker build -t myapp:$CIRCLE_SHA1 .
