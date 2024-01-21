@@ -45,8 +45,7 @@ jobs:
       - image: circleci/python:3.10
     steps:
       - checkout
-      - setup_remote_docker:
-          version: 20.10.6
+      - setup_remote_docker
       - run:
           name: Echo DJANGO_SECRET_KEY
           command: |
