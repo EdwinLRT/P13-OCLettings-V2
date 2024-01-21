@@ -11,7 +11,7 @@ services:
     command: gunicorn oc_lettings_site.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/app
-      - /app/P13_OCLettings/website.sqlite3  # Assurez-vous que cette ligne est correctement configurée pour votre fichier SQLite
+      - /app/P13_OCLettings/website.sqlite3
     ports:
       - "8000:8000"
     environment:

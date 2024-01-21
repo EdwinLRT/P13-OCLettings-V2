@@ -1,2 +1,1 @@
-web: gunicorn p13-oclettings.wsgi
-web: gunicorn p13-oclettings.wsgi --log-file -
+web: gunicorn p13-oclettings.wsgi --bind 0.0.0.0:$PORT --log-file -
