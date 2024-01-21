@@ -18,7 +18,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . /app/
 
 
-
 # Exposer le port sur lequel l'application va tourner
 EXPOSE 8000
 
