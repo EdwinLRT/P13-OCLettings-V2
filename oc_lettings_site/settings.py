@@ -6,10 +6,6 @@ from sentry_sdk.integrations.logging import LoggingIntegration
 import logging
 from dotenv import load_dotenv
 
-# Load environment variables from .env file
-load_dotenv()
-
-
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = Path(__file__).resolve().parent.parent
 
