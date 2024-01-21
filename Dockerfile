@@ -14,9 +14,6 @@ WORKDIR /app
 COPY requirements.txt /app/
 RUN pip install --upgrade pip && pip install -r requirements.txt
 
-# Copier le fichier .env dans l'image
-COPY .env /app/.env
-
 # Copier le projet dans le répertoire de travail
 COPY . /app/
 # Copier le fichier .env dans l'image
