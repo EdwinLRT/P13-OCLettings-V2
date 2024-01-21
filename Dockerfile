@@ -16,8 +16,6 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copier le projet dans le répertoire de travail
 COPY . /app/
-# Copier le fichier .env dans l'image
-COPY .env /app/.env
 
 # Créer le dossier static si nécessaire
 RUN mkdir -p /app/static
