@@ -18,10 +18,6 @@ htmlcov/
 .flake-report/
 .pytest_cache/
 
-# Exclude database migrations for development
-*/migrations/
-!*/migrations/__init__.py  # Include the __init__.py to keep migrations recognized as a package
-
 # Exclude development configuration files and environment variables
 *.env
 *.log
@@ -71,12 +67,3 @@ lib64/
 .ipynb_checkpoints
 *.ipynb
 
-# Exclude media and static if they are generated
-/media/
-/static/
-/staticfiles/
-
-# Docker specific
-.dockerignore
-Dockerfile
-*docker-compose*.yml
