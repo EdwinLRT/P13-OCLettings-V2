@@ -1,8 +1,9 @@
-from django.shortcuts import render
 import logging
+
 from django.shortcuts import render
 
 logger = logging.getLogger(__name__)
+
 
 def index(request):
     try:
@@ -11,7 +12,5 @@ def index(request):
         logger.error(f'Error rendering index: {e}', exc_info=True)
 
 
-
 def error_500(request):
     return render(request, '500.html')
-

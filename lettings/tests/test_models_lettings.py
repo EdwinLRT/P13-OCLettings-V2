@@ -1,6 +1,6 @@
 import pytest
 from django.core.exceptions import ValidationError
-from django.db.utils import IntegrityError
+
 from ..models import Address
 
 
@@ -49,4 +49,3 @@ def test_address_validation():
 def test_address_plural_name():
     # Test that the verbose_name_plural is correctly set
     assert Address._meta.verbose_name_plural == "Addresses"
-

@@ -1,6 +1,7 @@
 import pytest
-from django.urls import reverse
 from django.contrib.auth.models import User
+from django.urls import reverse
+
 from profiles.models import Profile
 
 
@@ -29,6 +30,7 @@ def test_index_view_renders_profiles(client):
     content = response.content.decode()
     assert user1.username in content
     assert user2.username in content
+
 
 @pytest.mark.django_db
 def test_profile_view_displays_favorite_city(client):

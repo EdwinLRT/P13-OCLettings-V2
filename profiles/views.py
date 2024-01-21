@@ -1,8 +1,9 @@
-from .models import Profile
 import logging
-from django.shortcuts import render, get_object_or_404
-from .models import Profile
+
 from django.http import Http404
+from django.shortcuts import render
+
+from .models import Profile
 
 logger = logging.getLogger(__name__)
 

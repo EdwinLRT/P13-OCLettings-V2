@@ -1,5 +1,5 @@
-from django.db import models
 from django.core.validators import MaxValueValidator, MinLengthValidator
+from django.db import models
 
 
 class Address(models.Model):
@@ -60,5 +60,3 @@ class Letting(models.Model):
             str: The title of the letting.
         """
         return self.title
-
-

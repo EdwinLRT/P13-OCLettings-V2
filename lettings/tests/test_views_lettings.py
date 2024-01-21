@@ -1,6 +1,8 @@
 import pytest
 from django.urls import reverse
+
 from lettings.models import Letting, Address
+
 
 @pytest.mark.django_db
 @pytest.mark.django_db
@@ -23,11 +25,13 @@ def test_index_view(client):
 @pytest.mark.django_db
 def test_letting_view(client):
     # Assurez-vous qu'il y a un objet Letting dans la base de données
-    address = Address.objects.create(number=123, street='Main Street', city='Anytown', state='AT', zip_code=12345, country_iso_code='USA')
+    address = Address.objects.create(number=123, street='Main Street',
+                                     city='Anytown', state='AT',
+                                     zip_code=12345,
+                                     country_iso_code='USA')
     letting = Letting.objects.create(title='Test Letting', address=address)
 
     url = reverse('lettings:letting', kwargs={'letting_id': letting.id})
     response = client.get(url)
     assert response.status_code == 200
     assert 'Main Street' in response.content.decode()
-

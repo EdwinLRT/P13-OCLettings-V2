@@ -1,8 +1,9 @@
-from django.shortcuts import render
-from .models import Letting
 import logging
-from django.http import Http404
 
+from django.http import Http404
+from django.shortcuts import render
+
+from .models import Letting
 
 logger = logging.getLogger(__name__)
 
