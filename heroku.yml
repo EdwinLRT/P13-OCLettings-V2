@@ -1,0 +1,6 @@
+build:
+  docker:
+    web: Dockerfile
+
+run:
+  web: gunicorn p13-oclettings.wsgi --bind 0.0.0.0:$PORT

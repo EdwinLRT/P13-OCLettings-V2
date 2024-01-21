@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Setup CircleCI">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/heroku.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +121,7 @@
       <workItem from="1703018096324" duration="5656000" />
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
-      <workItem from="1705617126178" duration="9900000" />
+      <workItem from="1705617126178" duration="10178000" />
     </task>
     <task id="LOCAL-00001" summary="Flake8 clean">
       <created>1704403072317</created>
@@ -181,7 +179,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705847988887</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Setup CircleCI">
+      <created>1705848271821</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1705848271821</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
