@@ -15,4 +15,4 @@ services:
     ports:
       - "8000:8000"
     environment:
-      - DEBUG=1  # Remplacer par '0' en production
+      - DEBUG=0
