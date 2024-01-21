@@ -56,6 +56,11 @@ jobs:
             docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t myapp:$CIRCLE_SHA1 .
 
       - run:
+          name: Print Docker tag command
+          command: |
+            echo "docker tag myapp:$CIRCLE_SHA1 $DOCKER_USERNAME/myapp:$CIRCLE_SHA1"      
+
+      - run:
           name: Login to Docker Hub
           command: echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
 
