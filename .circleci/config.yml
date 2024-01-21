@@ -90,13 +90,12 @@ jobs:
           name: Build and Push Docker Image to Heroku Registry
           command: |
             heroku container:login
-            docker build -t registry.heroku.com/$HEROKU_APP_NAME/web .
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t registry.heroku.com/$HEROKU_APP_NAME/web .
             docker push registry.heroku.com/$HEROKU_APP_NAME/web
       - run:
           name: Release to Heroku
           command: |
             heroku container:release web -a $HEROKU_APP_NAME
-
 
 workflows:
   version: 2
