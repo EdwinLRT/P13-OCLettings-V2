@@ -17,6 +17,9 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 # Copier le projet dans le répertoire de travail
 COPY . /app/
 
+# Collecter les fichiers statiques
+RUN python manage.py collectstatic --noinput
+
 # Exposer le port sur lequel l'application va tourner
 EXPOSE 8000
 
