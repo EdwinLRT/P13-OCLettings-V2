@@ -121,20 +121,6 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
     </task>
-    <task id="LOCAL-00001" summary="Flake8 clean">
-      <created>1704403072317</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1704403072317</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Test 80 ok - Sentry logs ok">
-      <created>1705064370159</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1705064370159</updated>
-    </task>
     <task id="LOCAL-00003" summary="Setup Docker+circleCI">
       <created>1705269926319</created>
       <option name="number" value="00003" />
@@ -464,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705881612204</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Cleaning code">
+      <created>1706107974826</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1706107974826</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Cleaning code">
+      <created>1706108165676</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1706108165676</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
