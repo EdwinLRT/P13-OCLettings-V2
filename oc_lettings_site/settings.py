@@ -109,6 +109,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
 
 sentry_logging = LoggingIntegration(
     level=logging.INFO,  # Capture info and above as breadcrumbs
