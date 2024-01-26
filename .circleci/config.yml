@@ -85,6 +85,7 @@ jobs:
           command: |
             echo "Heroku App Name: $HEROKU_APP_NAME"
             echo "Heroku API Key: $HEROKU_API_KEY"      
+            echo "Django Secret: $DJANGO_SECRET_KEY"
 
       - run:
           name: Build and Push Docker Image to Heroku Registry
