@@ -81,6 +81,9 @@ jobs:
           command: |
             echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
       - run:
+          name: Set Heroku Stack
+          command: heroku stack:set heroku-20 -a p13-oclettings
+      - run:
           name: Build and Push Docker Image to Heroku Registry
           command: |
             heroku container:login
