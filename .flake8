@@ -1,0 +1,12 @@
+[flake8]
+exclude =
+    .git,
+    __pycache__,
+    old,
+    build,
+    dist,
+    migrations,
+    settings.py
+    .venv
+    .env
+    .gitignore
