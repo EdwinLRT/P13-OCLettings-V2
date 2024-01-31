@@ -60,3 +60,4 @@ Thumbs.db
 *.json
 node_modules/
 /flake-report/
+
