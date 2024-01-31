@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Setup Sphinx for doc">
-      <change afterPath="$PROJECT_DIR$/.readthedocs.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Fix flake8 errors">
+      <change beforePath="$PROJECT_DIR$/.flake8" beforeDir="false" afterPath="$PROJECT_DIR$/.flake8" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,13 +122,6 @@
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
-    </task>
-    <task id="LOCAL-00031" summary="Cleaning code">
-      <created>1705865526438</created>
-      <option name="number" value="00031" />
-      <option name="presentableId" value="LOCAL-00031" />
-      <option name="project" value="LOCAL" />
-      <updated>1705865526438</updated>
     </task>
     <task id="LOCAL-00032" summary="Cleaning code">
       <created>1705865670203</created>
@@ -467,7 +459,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706516442546</updated>
     </task>
-    <option name="localTasksCounter" value="80" />
+    <task id="LOCAL-00080" summary="Fix flake8 errors">
+      <created>1706693406326</created>
+      <option name="number" value="00080" />
+      <option name="presentableId" value="LOCAL-00080" />
+      <option name="project" value="LOCAL" />
+      <updated>1706693406327</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,6 +481,7 @@
     <MESSAGE value="Cleaning code" />
     <MESSAGE value="Configure static files and add whitenoise" />
     <MESSAGE value="Setup Sphinx for doc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup Sphinx for doc" />
+    <MESSAGE value="Fix flake8 errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix flake8 errors" />
   </component>
 </project>
