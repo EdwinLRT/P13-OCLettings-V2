@@ -4,38 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Fix flake8 errors">
-      <change afterPath="$PROJECT_DIR$/doc/Use.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/configuration.rst" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/doc/installation.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/doc/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/.buildinfo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/.doctrees/environment.pickle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/.doctrees/index.doctree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_sources/index.rst.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/alabaster.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/basic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/doctools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/documentation_options.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/file.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/language_data.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/minus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/plus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/pygments.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/searchtools.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/_static/sphinx_highlight.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/genindex.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/objects.inv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/search.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/_build/searchindex.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/doc/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/make.bat" beforeDir="false" afterPath="$PROJECT_DIR$/doc/make.bat" afterDir="false" />
-    </list>
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Fix requirements.txt" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -151,20 +120,6 @@
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
-    </task>
-    <task id="LOCAL-00033" summary="Cleaning code">
-      <created>1705866254971</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1705866254971</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Cleaning code">
-      <created>1705866470145</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1705866470145</updated>
     </task>
     <task id="LOCAL-00035" summary="Cleaning code">
       <created>1705867045739</created>
@@ -495,7 +450,21 @@
       <option name="project" value="LOCAL" />
       <updated>1706693596433</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Setup project documentation">
+      <created>1706713664655</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1706713664655</updated>
+    </task>
+    <task id="LOCAL-00083" summary="Fix requirements.txt">
+      <created>1706714280767</created>
+      <option name="number" value="00083" />
+      <option name="presentableId" value="LOCAL-00083" />
+      <option name="project" value="LOCAL" />
+      <updated>1706714280767</updated>
+    </task>
+    <option name="localTasksCounter" value="84" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -511,6 +480,8 @@
     <MESSAGE value="Configure static files and add whitenoise" />
     <MESSAGE value="Setup Sphinx for doc" />
     <MESSAGE value="Fix flake8 errors" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix flake8 errors" />
+    <MESSAGE value="Setup project documentation" />
+    <MESSAGE value="Fix requirements.txt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fix requirements.txt" />
   </component>
 </project>
