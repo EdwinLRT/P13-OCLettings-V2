@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Setting up AWS deploy">
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Changing docker naming">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -124,13 +124,6 @@
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
-    </task>
-    <task id="LOCAL-00039" summary="Cleaning code">
-      <created>1705870897357</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1705870897357</updated>
     </task>
     <task id="LOCAL-00040" summary="Cleaning code">
       <created>1705873966307</created>
@@ -468,7 +461,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706805563646</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Changing docker naming">
+      <created>1706807123214</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1706807123214</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -489,6 +489,7 @@
     <MESSAGE value="Linting error" />
     <MESSAGE value="requirements.txt" />
     <MESSAGE value="Setting up AWS deploy" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setting up AWS deploy" />
+    <MESSAGE value="Changing docker naming" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing docker naming" />
   </component>
 </project>
