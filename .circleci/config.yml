@@ -87,7 +87,7 @@ jobs:
             echo "AWS_ACCOUNT_ID: $AWS_ACCOUNT_ID"
       - run:
           name: List AWS Regions
-          command: aws ec2 describe-regions --output table
+          command: aws ec2 describe-regions --region ${AWS_REGION} --output table
 
       - run:
           name: AWS ECR Login
