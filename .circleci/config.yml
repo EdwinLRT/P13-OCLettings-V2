@@ -81,6 +81,9 @@ jobs:
           command: |
             sudo apt-get update && sudo apt-get install awscli
       - run:
+          name: Configure AWS Region
+          command: aws configure set default.region ${AWS_REGION}
+      - run:
           name: Afficher les variables d'environnement AWS
           command: |
             echo "AWS_REGION: $AWS_REGION"
