@@ -53,7 +53,7 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t P13-OCLettings:$CIRCLE_SHA1 .
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t p13-oclettings-web:$CIRCLE_SHA1 .
 
       - run:
           name: Login to Docker Hub
@@ -63,8 +63,8 @@ jobs:
           name: Push Docker Image to Registry
           command: |
             echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
-            docker tag P13-OCLettings:$CIRCLE_SHA1 $DOCKERHUB_USERNAME/P13-OCLettings:$CIRCLE_SHA1
-            docker push $DOCKERHUB_USERNAME/P13-OCLettings:$CIRCLE_SHA1
+            docker tag p13-oclettings-web:$CIRCLE_SHA1 $DOCKERHUB_USERNAME/p13-oclettings-web:$CIRCLE_SHA1
+            docker push $DOCKERHUB_USERNAME/p13-oclettings-web:$CIRCLE_SHA1
 
   deploy-to-aws:
     docker:
@@ -75,7 +75,7 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t P13-OCLettings:$CIRCLE_SHA1 .
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t p13-oclettings-web:$CIRCLE_SHA1 .
       - run:
           name: Install AWS CLI
           command: |
@@ -87,8 +87,8 @@ jobs:
       - run:
           name: Tag and Push Docker Image to AWS ECR
           command: |
-            docker tag P13-OCLettings:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
-            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
+            docker tag p13-oclettings-web:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/p13-oclettings-web:$CIRCLE_SHA1
+            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/p13-oclettings-web:$CIRCLE_SHA1
       - run:
           name: Deploy to AWS ECS
           command: |
