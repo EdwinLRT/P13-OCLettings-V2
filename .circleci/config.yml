@@ -53,46 +53,47 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t myapp:$CIRCLE_SHA1 .
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t P13-OCLettings:$CIRCLE_SHA1 .
 
       - run:
           name: Login to Docker Hub
-          command: echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+          command: echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
 
       - run:
           name: Push Docker Image to Registry
           command: |
-            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            docker tag myapp:$CIRCLE_SHA1 $DOCKER_USERNAME/myapp:$CIRCLE_SHA1
-            docker push $DOCKER_USERNAME/myapp:$CIRCLE_SHA1
+            echo $DOCKERHUB_PASSWORD | docker login -u $DOCKERHUB_USERNAME --password-stdin
+            docker tag P13-OCLettings:$CIRCLE_SHA1 $DOCKERHUB_USERNAME/P13-OCLettings:$CIRCLE_SHA1
+            docker push $DOCKERHUB_USERNAME/P13-OCLettings:$CIRCLE_SHA1
 
-  deploy-to-heroku:
-    docker:
-      - image: cimg/python:3.10
-    steps:
-      - checkout
-      - setup_remote_docker
-      - run:
-          name: Install Heroku CLI
-          command: |
-            curl https://cli-assets.heroku.com/install.sh | sh
-      - run:
-          name: Heroku Login
-          command: |
-            echo "$HEROKU_API_KEY" | docker login --username=_ --password-stdin registry.heroku.com
-      - run:
-          name: Set Heroku Stack
-          command: heroku stack:set heroku-20 -a p13-oclettings
-      - run:
-          name: Build and Push Docker Image to Heroku Registry
-          command: |
-            heroku container:login
-            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t registry.heroku.com/$HEROKU_APP_NAME/web .
-            docker push registry.heroku.com/$HEROKU_APP_NAME/web
-      - run:
-          name: Release to Heroku
-          command: |
-            heroku container:release web -a $HEROKU_APP_NAME
+deploy-to-aws:
+  docker:
+    - image: cimg/python:3.10
+  steps:
+    - checkout
+    - setup_remote_docker
+    - run:
+        name: Build Docker Image
+        command: |
+          docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t P13-OCLettings:$CIRCLE_SHA1 .
+    - run:
+        name: Install AWS CLI
+        command: |
+          sudo pip install awscli
+    - run:
+        name: AWS ECR Login
+        command: |
+          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+    - run:
+        name: Tag and Push Docker Image to AWS ECR
+        command: |
+          docker tag P13-OCLettings:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
+          docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
+    - run:
+        name: Deploy to AWS ECS
+        command: |
+          # Add your AWS ECS deployment commands here
+
 
 workflows:
   version: 2
@@ -102,6 +103,6 @@ workflows:
       - build-docker-image:
           requires:
             - build-and-test
-      - deploy-to-heroku:
+      - deploy-to-aws:
           requires:
             - build-docker-image

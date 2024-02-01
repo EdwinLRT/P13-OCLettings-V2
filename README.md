@@ -2,6 +2,16 @@
 
 Site web d'Orange County Lettings
 
+Les objetcifs de la V2 de ce projet : 
+- Amélioration de l'architecture modulaire de l'application via réorganisation du code, modification de l'arborecence des fichiers et création de modules indépendants
+- Amélioration de la sécurité de l'application via l'ajout de tests unitaires et de tests d'intégration
+- Réduction des divers problèmes sur le projet : Linting, gestion des erreurs 404 et 500, documentation du code et des fonctions, etc.
+- Ajout de fonctionnalités : 
+    - Surveillance de l'application via Sentry
+    - Mise en place de logs pour l'application
+    - Création d'une pipeline CI/CD pour le déploiement de l'application
+- 
+
 ## Développement local
 
 ### Prérequis
@@ -75,3 +85,23 @@ Utilisation de PowerShell, comme ci-dessus sauf :
 
 - Pour activer l'environnement virtuel, `.\venv\Scripts\Activate.ps1` 
 - Remplacer `which <my-command>` par `(Get-Command <my-command>).Path`
+
+### Déploiement 
+Le processus de déploiement, automatisé par une pipeline CI/CD, active la mise en production du site à chaque validation sur la branche principale du dépôt.
+Cette automatisation comprend des étapes cruciales telles que l'installation des dépendances, l'exécution des tests,
+la vérification de la couverture des tests, la conteneurisation de l'application et son déploiement sur le serveur de production.
+
+Voici les différentes étapes de la pipeline CI/CD : 
+- Reproduction de l'environnement de développement local. (Variables, requirements...)
+- Vérification de la conformité syntaxique (Linting).
+- Execution des tests implantés.
+- Vérification de la couverture de tests (Sur ce projet, la couverture doit être superieure à 80%).
+- Conteneurisation de l'application via Docker, l'image crée est pushée sur Docker Hub.
+- Mise en production de l'application web chez l'hébergeur (ici AWS).
+
+ 
+Voici les éléments nécéssaires pour la mise en place correcte de la pipeline :
+ - Compte GitHub avec accès en lecture à ce repository.
+ - Compte Docker Hub.
+ - Compte Sentry avec un projet déjà configuré.
+ - Compte AWS avec possibilité de lancer des instances EC2.
