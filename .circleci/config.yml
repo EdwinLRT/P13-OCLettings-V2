@@ -66,33 +66,33 @@ jobs:
             docker tag P13-OCLettings:$CIRCLE_SHA1 $DOCKERHUB_USERNAME/P13-OCLettings:$CIRCLE_SHA1
             docker push $DOCKERHUB_USERNAME/P13-OCLettings:$CIRCLE_SHA1
 
-deploy-to-aws:
-  docker:
-    - image: cimg/python:3.10
-  steps:
-    - checkout
-    - setup_remote_docker
-    - run:
-        name: Build Docker Image
-        command: |
-          docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t P13-OCLettings:$CIRCLE_SHA1 .
-    - run:
-        name: Install AWS CLI
-        command: |
-          sudo pip install awscli
-    - run:
-        name: AWS ECR Login
-        command: |
-          aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
-    - run:
-        name: Tag and Push Docker Image to AWS ECR
-        command: |
-          docker tag P13-OCLettings:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
-          docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
-    - run:
-        name: Deploy to AWS ECS
-        command: |
-          # Add your AWS ECS deployment commands here
+  deploy-to-aws:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker Image
+          command: |
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t P13-OCLettings:$CIRCLE_SHA1 .
+      - run:
+          name: Install AWS CLI
+          command: |
+            sudo pip install awscli
+      - run:
+          name: AWS ECR Login
+          command: |
+            aws ecr get-login-password --region $AWS_REGION | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+      - run:
+          name: Tag and Push Docker Image to AWS ECR
+          command: |
+            docker tag P13-OCLettings:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
+            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/P13-OCLettings:$CIRCLE_SHA1
+      - run:
+          name: Deploy to AWS ECS
+          command: |
+            # Add your AWS ECS deployment commands here
 
 
 workflows:
