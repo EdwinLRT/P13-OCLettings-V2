@@ -79,7 +79,7 @@ jobs:
       - run:
           name: Install AWS CLI
           command: |
-            apt-get update && apt-get install awscli -y
+            sudo apt-get update && sudo apt-get install awscli
       - run:
           name: Configure AWS CLI
           command: |
@@ -93,12 +93,13 @@ jobs:
       - run:
           name: Tag and Push Docker Image to AWS ECR
           command: |
-            docker tag p13-oclettings-web:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/p13-oclettings-web:$CIRCLE_SHA1
-            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/p13-oclettings-web:$CIRCLE_SHA1
+            docker tag p13-oclettings-web:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/p13-oclettings-web:$CIRCLE_SHA1
+            docker push $AWS_ACCOUNT_ID.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/p13-oclettings-web:$CIRCLE_SHA1
       - run:
           name: Deploy to AWS ECS
           command: |
             # Add your AWS ECS deployment commands here
+
 
 workflows:
   version: 2
