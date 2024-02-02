@@ -59,5 +59,4 @@ workflows:
           family: oclettings-website-service
           profile_name: OIDC-USER
           region: ${AWS_DEFAULT_REGION}
-          requires:
-            - aws-ecr/build-and-push-image
+
