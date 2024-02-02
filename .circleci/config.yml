@@ -33,24 +33,23 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-  jobs:
-    build-docker-image:
-      docker:
-        - image: circleci/python:3.10
-      steps:
-        - checkout
-        - setup_remote_docker
-        - run:
-            name: Build Docker Image
-            command: |
-              docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t $ECR_REPOSITORY:$CIRCLE_SHA1 .
-        - aws-ecr/ecr-login:
-            region: AWS_REGION
-        - run:
-            name: Push Docker Image to AWS ECR
-            command: |
-              docker tag $ECR_REPOSITORY:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
-              docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
+  build-docker-image:
+    docker:
+      - image: circleci/python:3.10
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker Image
+          command: |
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t $ECR_REPOSITORY:$CIRCLE_SHA1 .
+      - aws-ecr/ecr-login:
+          region: AWS_REGION
+      - run:
+          name: Push Docker Image to AWS ECR
+          command: |
+            docker tag $ECR_REPOSITORY:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
+            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
 
   deploy-to-ecs:
     executor: aws-ecs/default
