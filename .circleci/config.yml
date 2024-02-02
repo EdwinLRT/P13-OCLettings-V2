@@ -40,7 +40,7 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t oclettingswebsite_v2:latest .
+            docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t oclettingswebsite_v2:$CIRCLE_SHA1 .
       - run:
           name: Docker Login
           command: echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USERNAME --password-stdin
