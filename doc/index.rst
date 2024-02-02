@@ -1,6 +1,9 @@
 ===============================================
 Documentation d'Orange County Lettings Website
 ===============================================
+.. image:: https://readthedocs.org/projects/p13-oclettings-v2/badge/?version=latest
+   :target: https://p13-oclettings-v2.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
 
 Bienvenue dans la documentation de OC Lettings website.
 
