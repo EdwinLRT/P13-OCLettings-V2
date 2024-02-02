@@ -4,7 +4,7 @@ orbs:
   python: circleci/python@1.2.0
   docker: circleci/docker@0.5.20
   aws-ecr: circleci/aws-ecr@7.3.0
-  aws-ecs: circleci/aws-ecs@1.3.0
+  aws-ecs: circleci/aws-ecs@9.0.2
 
 jobs:
   build-and-test:
@@ -54,9 +54,7 @@ jobs:
   deploy-to-ecs:
     executor: aws-ecs/default
     steps:
-      - checkout
       - aws-ecs/deploy-service-update:
-          name: Deploy to ECS
           cluster: ${CLUSTER_NAME}
           service: ${SERVICE_NAME}
           container-name: ${CONTAINER_NAME}
