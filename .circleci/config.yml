@@ -43,7 +43,7 @@ jobs:
             docker build --build-arg DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY} -t oclettingswebsite_v2:$CIRCLE_SHA1 .
       - run:
           name: Docker Login
-          command: echo "$DOCKER_PASSWORD" | docker login --username "$DOCKER_USERNAME" --password-stdin
+          command: echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
       - run:
           name: Docker Push
           command: docker push oclettingswebsite_v2:latest
