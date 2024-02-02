@@ -3,9 +3,6 @@ version: 2.1
 orbs:
   python: circleci/python@1.2.0
   docker: circleci/docker@0.5.20
-  aws-cli: circleci/aws-cli@4.0
-  aws-ecr: circleci/aws-ecr@9.0.2
-  aws-ecs: circleci/aws-ecs@4.0
 
 jobs:
   build-and-test:
@@ -34,31 +31,32 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
+  deploy-to-pythonanywhere:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - run:
+          name: Install PythonAnywhere API client
+          command: |
+            pip install pythonanywhere
+      - run:
+          name: Deploy to PythonAnywhere
+          command: |
+            # Assurez-vous de remplacer 'your_pythonanywhere_username' par votre nom d'utilisateur PythonAnywhere
+            # et 'your_webapp_name' par le nom de votre application web sur PythonAnywhere
+            echo "from pythonanywhere.api.webapp import Webapp" > pa_deploy_script.py
+            echo "api_token = '${PYTHONANYWHERE_API_TOKEN}'" >> pa_deploy_script.py
+            echo "username = '${PYTHONANYWHERE_USERNAME}'" >> pa_deploy_script.py
+            echo "webapp = Webapp(username, 'oclettingswebsite', api_token)" >> pa_deploy_script.py
+            echo "webapp.reload()" >> pa_deploy_script.py
+            python pa_deploy_script.py
+
 workflows:
+  version: 2
   build-and-deploy:
     jobs:
       - build-and-test
-      - aws-ecr/build_and_push_image:
-          auth:
-            - aws-cli/setup:
-                profile_name: OIDC-USER
-                role_arn: arn:aws:iam::767397722620:role/adminrole   #arn:aws:iam::767397722620:user/edwinlrt
-                role_session_name: aws_ecr_build_and_push_image
-          profile_name: OIDC-USER
-          region: ${AWS_DEFAULT_REGION}
-          repo: oclettings-website
-          tag: ${CIRCLE_SHA1}
+      - deploy-to-pythonanywhere:
           requires:
             - build-and-test
-      - aws-ecs/deploy_service_update:
-          auth:
-            - aws-cli/setup:
-                profile_name: OIDC-USER
-                role_arn: arn:aws:iam::767397722620:role/adminrole  #arn:aws:iam::767397722620:user/edwinlrt
-          cluster: oclettings-website-cluster
-          container_image_name_updates: "container=oclettings-website-service,tag=${CIRCLE_SHA1}"
-          family: oclettings-website-service
-          profile_name: OIDC-USER
-          region: ${AWS_DEFAULT_REGION}
-          requires:
-            - aws-ecr/build_and_push_image
