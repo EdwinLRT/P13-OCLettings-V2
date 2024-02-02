@@ -54,7 +54,9 @@ jobs:
   deploy-to-ecs:
     executor: aws-ecs/default
     steps:
+      - checkout
       - aws-ecs/deploy-service-update:
+          name: Deploy to ECS
           cluster: ${CLUSTER_NAME}
           service: ${SERVICE_NAME}
           container-name: ${CONTAINER_NAME}
