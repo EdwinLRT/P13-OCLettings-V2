@@ -60,9 +60,6 @@ jobs:
       - run:
           name: Deploy to Render
           command: |
-            # Assurez-vous d'avoir configuré le CLI Render et d'être connecté
-            # Cette étape pourrait nécessiter une configuration personnalisée basée sur votre processus de déploiement avec Render.
-            # Exemple générique pour déclencher un déploiement via Git
             git push render main
 
 workflows:
@@ -73,6 +70,6 @@ workflows:
       - build-docker-image:
           requires:
             - build-and-test
-      #- deploy-to-render:
-       #   requires:
-         #   - build-docker-image
+      - deploy-to-render:
+          requires:
+            - build-docker-image
