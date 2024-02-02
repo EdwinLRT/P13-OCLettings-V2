@@ -12,31 +12,22 @@ jobs:
       - image: circleci/python:3.10
     steps:
       - checkout
-
-      # Restauration du cache (si vous voulez l'ajouter)
       - restore_cache:
           keys:
             - v1-dependencies-{{ checksum "requirements.txt" }}
             - v1-dependencies-
-
       - python/install-packages:
           pkg-manager: pip
-
-      # Linting
       - run:
           name: Linting
           command: |
             pip install flake8
             flake8 .
-
-      # Exécution des tests avec vérification de la couverture
       - run:
           name: Run Tests and Check Coverage
           command: |
             pip install pytest pytest-cov
             pytest --cov=. --cov-report=term --cov-fail-under=80
-
-      # Sauvegarde du cache (si vous voulez l'ajouter)
       - save_cache:
           paths:
             - ./venv
@@ -59,6 +50,7 @@ jobs:
           command: |
             docker tag $ECR_REPOSITORY:$CIRCLE_SHA1 $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
             docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
+
   deploy-to-ecs:
     executor: aws-ecs/default
     steps:
