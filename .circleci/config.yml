@@ -46,8 +46,8 @@ jobs:
       - run:
           name: Build and Push Docker Image
           command: |
-            docker build -t $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1 .
-            docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$ECR_REPOSITORY:$CIRCLE_SHA1
+            docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${ECR_REPOSITORY}:$CIRCLE_SHA1 .
+            docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${ECR_REPOSITORY}:$CIRCLE_SHA1
 
   deploy-to-ecs:
     executor: aws-ecs/default
@@ -56,7 +56,7 @@ jobs:
           cluster: ${CLUSTER_NAME}
           service: ${SERVICE_NAME}
           container-image-name-updates: "container=${CONTAINER_NAME},tag=$CIRCLE_SHA1"
-          region: ${AWS_REGION}
+          region: ${AWS_DEFAULT_REGION}
 
 workflows:
   version: 2
