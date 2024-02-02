@@ -50,7 +50,7 @@ jobs:
   deploy-to-ecs:
     executor: aws-ecs/default
     steps:
-      - aws-ecs/deploy-service-update:
+      - aws-ecs/deploy_service_update:
           cluster: ${CLUSTER_NAME}
           service: ${SERVICE_NAME}
           container-image-name-updates: "container=${CONTAINER_NAME},tag=$CIRCLE_SHA1"
