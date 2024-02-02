@@ -92,11 +92,11 @@ jobs:
             echo "Verifying AWS Configuration Variables"
             echo "AWS_ACCESS_KEY_ID set to: ${AWS_ACCESS_KEY_ID:0:4}********"
             echo "AWS_SECRET_ACCESS_KEY set to: ${AWS_SECRET_ACCESS_KEY:0:4}********"
-            echo "AWS_DEFAULT_REGION set to: $AWS_DEFAULT_REGION"
+            echo "AWS_DEFAULT_REGION set to: ${AWS_DEFAULT_REGION}"
       - run:
           name: AWS ECR Login
           command: |
-            aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com
+            aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --username AWS --password-stdin ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com
       - run:
           name: Tag and Push Docker Image to AWS ECR
           command: |
