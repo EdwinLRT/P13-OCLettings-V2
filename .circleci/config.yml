@@ -46,10 +46,11 @@ jobs:
           command: echo "$DOCKERHUB_PASSWORD" | docker login --username "$DOCKERHUB_USERNAME" --password-stdin
       - run:
           name: Docker Push
-          command:
+          command: |
             docker tag oclettingswebsite_v2:$CIRCLE_SHA1 $DOCKERHUB_USERNAME/oclettingswebsite_v2:$CIRCLE_SHA1
             docker push $DOCKERHUB_USERNAME/oclettingswebsite_v2:$CIRCLE_SHA1
-
+  
+  
 
   deploy-to-render:
     docker:
