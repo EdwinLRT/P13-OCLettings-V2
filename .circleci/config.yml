@@ -43,6 +43,7 @@ workflows:
             - aws-cli/setup:
                 profile_name: OIDC-USER
                 role_arn: arn:aws:iam::767397722620:user/edwinlrt
+                role_session_name: aws_ecr_build_and_push_image
           profile_name: OIDC-USER
           region: ${AWS_DEFAULT_REGION}
           repo: oclettings-website
