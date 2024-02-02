@@ -31,32 +31,44 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-  deploy-to-pythonanywhere:
+  build-docker-image:
+    docker:
+      - image: cimg/python:3.10
+    steps:
+      - checkout
+      - setup_remote_docker
+      - run:
+          name: Build Docker Image
+          command: |
+            docker build -t your_image_name:latest .
+      - run:
+          name: Docker Login
+          command: echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USERNAME --password-stdin
+      - run:
+          name: Docker Push
+          command: docker push your_image_name:latest
+
+  deploy-to-render:
     docker:
       - image: cimg/python:3.10
     steps:
       - checkout
       - run:
-          name: Install PythonAnywhere API client
+          name: Deploy to Render
           command: |
-            pip install pythonanywhere
-      - run:
-          name: Deploy to PythonAnywhere
-          command: |
-            # Assurez-vous de remplacer 'your_pythonanywhere_username' par votre nom d'utilisateur PythonAnywhere
-            # et 'your_webapp_name' par le nom de votre application web sur PythonAnywhere
-            echo "from pythonanywhere.api.webapp import Webapp" > pa_deploy_script.py
-            echo "api_token = '${PYTHONANYWHERE_API_TOKEN}'" >> pa_deploy_script.py
-            echo "username = '${PYTHONANYWHERE_USERNAME}'" >> pa_deploy_script.py
-            echo "webapp = Webapp(username, 'oclettingswebsite', api_token)" >> pa_deploy_script.py
-            echo "webapp.reload()" >> pa_deploy_script.py
-            python pa_deploy_script.py
+            # Assurez-vous d'avoir configuré le CLI Render et d'être connecté
+            # Cette étape pourrait nécessiter une configuration personnalisée basée sur votre processus de déploiement avec Render.
+            # Exemple générique pour déclencher un déploiement via Git
+            git push render main
 
 workflows:
   version: 2
   build-and-deploy:
     jobs:
       - build-and-test
-      - deploy-to-pythonanywhere:
+      - build-docker-image:
           requires:
             - build-and-test
+      - deploy-to-render:
+          requires:
+            - build-docker-image
