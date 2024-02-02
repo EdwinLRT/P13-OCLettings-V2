@@ -124,13 +124,6 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
     </task>
-    <task id="LOCAL-00080" summary="Fix flake8 errors">
-      <created>1706693406326</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1706693406327</updated>
-    </task>
     <task id="LOCAL-00081" summary="Fix flake8 errors">
       <created>1706693596433</created>
       <option name="number" value="00081" />
@@ -467,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706874014513</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="Running some tests for deploy">
+      <created>1706874196380</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1706874196380</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
