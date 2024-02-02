@@ -5,7 +5,7 @@ Documentation d'Orange County Lettings Website
    :target: https://p13-oclettings-v2.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
-Bienvenue dans la documentation de OC Lettings website.
+Bienvenue dans la documentation de OC Lettings website
 
 Orange County Lettings est une start-up dans le secteur de la location de biens immobiliers.
 
