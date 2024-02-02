@@ -45,7 +45,6 @@ workflows:
                 role_arn: arn:aws:iam::123456789012:role/VALID_OIDC_ECR_ROLE
           profile_name: OIDC-USER
           region: AWS_REGION
-          registry_id: AWS_ECR_REGISTRY_ID
           repo: MY_APP_PREFIX
           tag: ${CIRCLE_SHA1}
           requires:
