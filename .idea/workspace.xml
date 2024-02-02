@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Running some tests for deploy">
       <change beforePath="$PROJECT_DIR$/.circleci/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.circleci/config.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,13 +123,6 @@
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
-    </task>
-    <task id="LOCAL-00089" summary="Modifying AWSCLI install">
-      <created>1706808391598</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1706808391598</updated>
     </task>
     <task id="LOCAL-00090" summary="Modifying AWS deploy">
       <created>1706809911265</created>
@@ -468,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706880668810</updated>
     </task>
-    <option name="localTasksCounter" value="138" />
+    <task id="LOCAL-00138" summary="Running some tests for deploy">
+      <created>1706880834671</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1706880834671</updated>
+    </task>
+    <option name="localTasksCounter" value="139" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

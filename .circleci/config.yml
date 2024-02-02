@@ -40,13 +40,13 @@ jobs:
       - run:
           name: Build Docker Image
           command: |
-            docker build -t your_image_name:latest .
+            docker build -t oc_lettings_websiteV2:latest .
       - run:
           name: Docker Login
           command: echo "$DOCKERHUB_PASS" | docker login --username $DOCKERHUB_USERNAME --password-stdin
       - run:
           name: Docker Push
-          command: docker push oc_lettings_websiteV0.1:latest
+          command: docker push oc_lettings_websiteV2:latest
 
   deploy-to-render:
     docker:
