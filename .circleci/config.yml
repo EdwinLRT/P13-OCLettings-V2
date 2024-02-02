@@ -1,16 +1,14 @@
 version: 2.1
 
 orbs:
-  python: circleci/python@1.2.0
-  docker: circleci/docker@0.5.20
-  aws-ecr: circleci/aws-ecr@9.0.2
-  aws-ecs: circleci/aws-ecs@4.0.0
-  aws-cli: circleci/aws-cli@3.1.1
+  aws-cli: circleci/aws-cli@4.0
+  aws-ecr: circleci/aws-ecr@9.0
+  aws-ecs: circleci/aws-ecs@4.0
 
 jobs:
   build-and-test:
     docker:
-      - image: circleci/python:3.10
+      - image: cimg/python:3.10
     steps:
       - checkout
       - restore_cache:
@@ -34,36 +32,31 @@ jobs:
             - ./venv
           key: v1-dependencies-{{ checksum "requirements.txt" }}
 
-  build-and-push-docker-image:
-    executor: docker/docker
-    steps:
-      - checkout
-      - setup_remote_docker
-      - aws-ecr/ecr_login:
-          region: ${AWS_DEFAULT_REGION}
-      - run:
-          name: Build and Push Docker Image
-          command: |
-            docker build -t ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${ECR_REPOSITORY}:$CIRCLE_SHA1 .
-            docker push ${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${ECR_REPOSITORY}:$CIRCLE_SHA1
-
-  deploy-to-ecs:
-    executor: aws-ecs/default
-    steps:
-      - aws-ecs/deploy_service_update:
-          cluster: ${CLUSTER_NAME}
-          service: ${SERVICE_NAME}
-          container-image-name-updates: "container=${CONTAINER_NAME},tag=$CIRCLE_SHA1"
-          region: ${AWS_DEFAULT_REGION}
-
 workflows:
-  version: 2
   build-and-deploy:
     jobs:
       - build-and-test
-      - build-and-push-docker-image:
+      - aws-ecr/build-and-push-image:
+          auth:
+            - aws-cli/setup:
+                profile_name: OIDC-USER
+                role_arn: arn:aws:iam::123456789012:role/VALID_OIDC_ECR_ROLE
+          profile_name: OIDC-USER
+          region: AWS_REGION
+          registry_id: AWS_ECR_REGISTRY_ID
+          repo: MY_APP_PREFIX
+          tag: ${CIRCLE_SHA1}
           requires:
             - build-and-test
-      - deploy-to-ecs:
+      - aws-ecs/deploy_service_update:
+          auth:
+            - aws-cli/setup:
+                profile_name: OIDC-USER
+                role_arn: arn:aws:iam::123456789012:role/VALID_OIDC_ECS_ROLE
+          cluster: MY_APP_PREFIX-cluster
+          container_image_name_updates: "container=MY_APP_PREFIX-service,tag=${CIRCLE_SHA1}"
+          family: MY_APP_PREFIX-service
+          profile_name: OIDC-USER
+          region: AWS_REGION
           requires:
-            - build-and-push-docker-image
+            - aws-ecr/build-and-push-image
