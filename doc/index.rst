@@ -1,6 +1,6 @@
-=====================
+===============================================
 Documentation d'Orange County Lettings Website
-=====================
+===============================================
 
 Bienvenue dans la documentation de OC Lettings website.
 
@@ -9,16 +9,22 @@ Orange County Lettings est une start-up dans le secteur de la location de biens 
 L'objectif de cette documentation est de présenter le site web de la start-up et de décrire les fonctionnalités de ce dernier.
 Tout en donnant les clés pour une meilleur compréhension des différentes fonctionnalités du site et des choix de développement.
 
-Sommaire :
-----------------
+.. Table of Contents
+.. _sommaire:
 
-.. _ma-section-cible:
+Sommaire
+========
+
+.. contents:: :local:
+   :depth: 2
+
+
 
 
 
 
 Installation du projet en local
-----------------
+-------------------------------
 
 
 - Clonez ce dépôt de code à l’aide de la commande (vous pouvez également télécharger le code en tant qu’archive zip) :
@@ -65,9 +71,21 @@ Installation du projet en local
 
        $ pip install -r requirements.txt
 
+Création des variables d'environnement
+--------------------------------------
 
-Démarrez le serveur
-----------------
+Créer des variables d'environnement est essentiel pour sécuriser et personnaliser la configuration d'un projet Django.
+Cela permet de protéger les données sensibles, de rendre le code portable et de simplifier les mises à jour.
+Les variables d'environnement peuvent être stockées dans un fichier .env et chargées dans le code à l'aide de bibliothèques comme python-decouple.
+Cela garantit que les informations sensibles ne sont pas exposées dans le code source et facilite la gestion des environnements de développement.
+
+Ce projet nécéssite la création d'un fichier .env à la racine du projet. Et à minima, les variables suivantes doivent être définies :
+    - Django Secret Key
+    - Django Debug
+    - Sentry DSN
+
+Démarrez le serveur local
+-------------------------
 
 Après avoir réalisé les étapes d’installation, démarrez le serveur avec :
    .. code-block::
@@ -81,8 +99,43 @@ Vous devriez être en mesure d'accéder et de naviguer sur le site de manière l
 Vous retrouverez les fonctionnalités du site web de la start-up Orange County Lettings,
 les profils des utilisateurs et les différentes locations.
 
+
+Naviguer sur le site
+--------------------
+
+Les différents URLs du site sont les suivants :
+
+ - / : Page d’accueil du site.
+
+ - lettings/ : Liste des locations.
+
+ - lettings/<letting_id>/ : Page détaillée d’une location.
+
+ - profiles/ : Liste des profils utilisateurs.
+
+ - profiles/<username>/ : Page détaillée d’un profil utilisateur.
+
+ - admin/ : Interface de gestion administrateur du site.
+
+L'accès à l'interface d'administration est réservé aux utilisateurs ayant les droits d'administration. Pour accéder à cette interface, vous devez créer un superutilisateur avec la commande suivante :
+
+   .. code-block::
+
+       $ python manage.py createsuperuser
+
+Le code source est divisé en trois applications distinctes, permettant de séparer les fonctionnalités du site web:
+
+ - oc_lettings_site : Dossier de configuration principal il centralise les URLs.
+
+ - profiles : Dossier du modèle Profile. Cette application gère les profils utilisateurs.
+
+ - lettings : Dossier du modèle Letting. Cette application gère les locations.
+
+
+
+
 Technologies utilisées
-----------------
+----------------------
 
  - **Python 3.11**
 
@@ -114,6 +167,6 @@ Technologies utilisées
  - **Circle CI**: CircleCI est un service d'intégration et de déploiement continu qui automatise le processus de test et de déploiement de votre code. Il offre une configuration facile, une intégration avec divers outils et services, et prend en charge de nombreux langages de programmation et frameworks.
 
 
- - **Heroku**: Heroku est une plateforme cloud qui permet le déploiement, la gestion et le dimensionnement d'applications. Elle est connue pour sa facilité d'utilisation et sa capacité à simplifier les processus de déploiement d'applications web.
+ - **Render**: Render est une plateforme cloud qui permet le déploiement, la gestion et le dimensionnement d'applications. Elle est connue pour sa facilité d'utilisation et sa capacité à simplifier les processus de déploiement d'applications web.
 
  - **SQlite3**: SQLite3 est un système de gestion de base de données relationnelle léger, qui est intégré dans l'application. Il est très apprécié pour sa simplicité, sa fiabilité et son indépendance, ne nécessitant pas de serveur de base de données séparé.
