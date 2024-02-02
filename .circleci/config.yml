@@ -38,7 +38,7 @@ workflows:
   build-and-deploy:
     jobs:
       - build-and-test
-      - aws-ecr/build_and_push_image:
+      - aws-ecr/build-and-push-image:
           auth:
             - aws-cli/setup:
                 profile_name: OIDC-USER
@@ -60,4 +60,4 @@ workflows:
           profile_name: OIDC-USER
           region: ${AWS_DEFAULT_REGION}
           requires:
-            - aws-ecr/build_and_push_image
+            - aws-ecr/build-and-push-image
