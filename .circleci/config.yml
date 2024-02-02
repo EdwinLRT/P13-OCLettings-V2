@@ -42,7 +42,7 @@ workflows:
           auth:
             - aws-cli/setup:
                 profile_name: OIDC-USER
-                role_arn: arn:aws:iam::767397722620:role/adminrole   #arn:aws:iam::767397722620:user/edwinlrt
+                role_arn: arn:aws:iam::767397722620:role/adminrole  #arn:aws:iam::767397722620:user/edwinlrt
                 role_session_name: aws_ecr_build_and_push_image
           profile_name: OIDC-USER
           region: ${AWS_DEFAULT_REGION}
@@ -54,7 +54,7 @@ workflows:
           auth:
             - aws-cli/setup:
                 profile_name: OIDC-USER
-                role_arn: arn:aws:iam::767397722620:role/adminrole  #arn:aws:iam::767397722620:user/edwinlrt
+                role_arn: arn:aws:iam::767397722620:role/adminrole #arn:aws:iam::767397722620:user/edwinlrt
           cluster: oclettings-website-cluster
           container_image_name_updates: "container=oclettings-website-service,tag=${CIRCLE_SHA1}"
           family: oclettings-website-service
