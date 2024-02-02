@@ -47,9 +47,8 @@ jobs:
       - run:
           name: Docker Push
           command:
-            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin
-            docker tag myapp:$CIRCLE_SHA1 $DOCKER_USERNAME/oclettingswebsite_v2:$CIRCLE_SHA1
-            docker push $DOCKER_USERNAME/oclettingswebsite_v2:$CIRCLE_SHA1
+            docker tag oclettingswebsite_v2:$CIRCLE_SHA1 $DOCKERHUB_USERNAME/oclettingswebsite_v2:$CIRCLE_SHA1
+            docker push $DOCKERHUB_USERNAME/oclettingswebsite_v2:$CIRCLE_SHA1
 
 
   deploy-to-render:
