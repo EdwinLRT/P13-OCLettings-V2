@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Test Deploying app">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Updating documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/index.rst" beforeDir="false" afterPath="$PROJECT_DIR$/doc/index.rst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,27 +123,6 @@
       <workItem from="1703416540370" duration="25562000" />
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
-    </task>
-    <task id="LOCAL-00103" summary="Running some tests for deploy">
-      <created>1706866145734</created>
-      <option name="number" value="00103" />
-      <option name="presentableId" value="LOCAL-00103" />
-      <option name="project" value="LOCAL" />
-      <updated>1706866145734</updated>
-    </task>
-    <task id="LOCAL-00104" summary="Running some tests for deploy">
-      <created>1706866247860</created>
-      <option name="number" value="00104" />
-      <option name="presentableId" value="LOCAL-00104" />
-      <option name="project" value="LOCAL" />
-      <updated>1706866247860</updated>
-    </task>
-    <task id="LOCAL-00105" summary="Running some tests for deploy">
-      <created>1706866330783</created>
-      <option name="number" value="00105" />
-      <option name="presentableId" value="LOCAL-00105" />
-      <option name="project" value="LOCAL" />
-      <updated>1706866330783</updated>
     </task>
     <task id="LOCAL-00106" summary="Running some tests for deploy">
       <created>1706866434922</created>
@@ -469,7 +446,28 @@
       <option name="project" value="LOCAL" />
       <updated>1706885436208</updated>
     </task>
-    <option name="localTasksCounter" value="152" />
+    <task id="LOCAL-00152" summary="Updating documentation">
+      <created>1706890468100</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1706890468100</updated>
+    </task>
+    <task id="LOCAL-00153" summary="Updating documentation">
+      <created>1706890602923</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1706890602923</updated>
+    </task>
+    <task id="LOCAL-00154" summary="Updating documentation">
+      <created>1706890635283</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1706890635283</updated>
+    </task>
+    <option name="localTasksCounter" value="155" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -495,6 +493,7 @@
     <MESSAGE value="Modifying AWS deploy" />
     <MESSAGE value="Running some tests for deploy" />
     <MESSAGE value="Test Deploying app" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Deploying app" />
+    <MESSAGE value="Updating documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating documentation" />
   </component>
 </project>
