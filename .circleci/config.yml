@@ -38,7 +38,7 @@ workflows:
   build-and-deploy:
     jobs:
       - build-and-test
-      - aws-ecr/build-and-push-image:
+      - aws-ecr/build_and_push_image:
           auth:
             - aws-cli/setup:
                 profile_name: OIDC-USER
