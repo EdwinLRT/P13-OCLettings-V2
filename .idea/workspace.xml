@@ -54,6 +54,9 @@
       </RecentBranches>
     </option>
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/templates/index.html" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -125,13 +128,6 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
       <workItem from="1706890889217" duration="803000" />
-    </task>
-    <task id="LOCAL-00109" summary="Running some tests for deploy">
-      <created>1706867134608</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1706867134608</updated>
     </task>
     <task id="LOCAL-00110" summary="Running some tests for deploy">
       <created>1706867259657</created>
@@ -469,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1706891407716</updated>
     </task>
-    <option name="localTasksCounter" value="158" />
+    <task id="LOCAL-00158" summary="Updating index title">
+      <created>1707050393397</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1707050393397</updated>
+    </task>
+    <option name="localTasksCounter" value="159" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,6 +499,7 @@
     <MESSAGE value="Running some tests for deploy" />
     <MESSAGE value="Test Deploying app" />
     <MESSAGE value="Updating documentation" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updating documentation" />
+    <MESSAGE value="Updating index title" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating index title" />
   </component>
 </project>
