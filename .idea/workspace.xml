@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Updating documentation">
-      <change beforePath="$PROJECT_DIR$/docs/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/docs/conf.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,20 +128,6 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
       <workItem from="1706890889217" duration="803000" />
-    </task>
-    <task id="LOCAL-00112" summary="Running some tests for deploy">
-      <created>1706867654744</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1706867654744</updated>
-    </task>
-    <task id="LOCAL-00113" summary="Running some tests for deploy">
-      <created>1706867834333</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1706867834333</updated>
     </task>
     <task id="LOCAL-00114" summary="Running some tests for deploy">
       <created>1706867911574</created>
@@ -472,7 +458,21 @@
       <option name="project" value="LOCAL" />
       <updated>1707127525996</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Updating documentation">
+      <created>1707128102982</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1707128102982</updated>
+    </task>
+    <task id="LOCAL-00162" summary="Updating documentation">
+      <created>1707128139003</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1707128139003</updated>
+    </task>
+    <option name="localTasksCounter" value="163" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
