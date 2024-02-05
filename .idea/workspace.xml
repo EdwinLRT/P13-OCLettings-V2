@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Updating documentation">
-      <change beforePath="$PROJECT_DIR$/.readthedocs.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/.readthedocs.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,13 +128,6 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
       <workItem from="1706890889217" duration="803000" />
-    </task>
-    <task id="LOCAL-00118" summary="Running some tests for deploy">
-      <created>1706868473424</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1706868473424</updated>
     </task>
     <task id="LOCAL-00119" summary="Running some tests for deploy">
       <created>1706868611435</created>
@@ -472,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707129167274</updated>
     </task>
-    <option name="localTasksCounter" value="167" />
+    <task id="LOCAL-00167" summary="Updating documentation">
+      <created>1707130044972</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1707130044972</updated>
+    </task>
+    <option name="localTasksCounter" value="168" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
