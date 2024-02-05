@@ -250,3 +250,39 @@ Le diagramme simplifié de la base de données est le suivant :
    :height: 620px
    :width: 580px
    :align: center
+
+Exemples d'utilisation
+----------------------
+
+Accès au site
+~~~~~~~~~~~~~
+Pour accéder au site après un déploiement réussi, veuillez entrer l’adresse suivante dans votre navigateur:
+
+   .. code-block::
+
+        http://<ip-publique>:8000/
+
+
+Accès aux profils utilisateurs (profiles)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Une fois sur le site, veuillez cliquer sur le bouton Profiles. Cela vous mènera à la liste des profils utilisateurs inscrits sur le site. Veuillez cliquer sur l’un des profils pour accéder à sa page détaillée. Les URLs correspondants sont les suivantes :
+
+   .. code-block::
+
+        http://<ip-publique>:8000/profiles/
+
+        http://<ip-publique>:8000/profiles/<nom_d'utilisateur>/
+
+
+Accès aux locations (lettings)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Veuillez cliquer sur le bouton “Lettings”. Cela vous mènera à la liste des locations enregistrées dans la base de données.
+Vous pouvez cliquer sur une location pour accéder à sa page détaillée.
+
+Les URLs correspondants sont les suivantes:
+
+   .. code-block::
+
+        http://<ip-publique>:8000/lettings/
+
+        http://<ip-publique>:8000/lettings/<id_de_la_location>/
