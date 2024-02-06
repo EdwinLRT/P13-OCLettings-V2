@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Cleaning code">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Updating DSN params">
       <change beforePath="$PROJECT_DIR$/oc_lettings_site/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/oc_lettings_site/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -129,13 +128,6 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
       <workItem from="1706890889217" duration="803000" />
-    </task>
-    <task id="LOCAL-00124" summary="Running some tests for deploy">
-      <created>1706873091182</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1706873091182</updated>
     </task>
     <task id="LOCAL-00125" summary="Running some tests for deploy">
       <created>1706873127806</created>
@@ -473,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707212001634</updated>
     </task>
-    <option name="localTasksCounter" value="173" />
+    <task id="LOCAL-00173" summary="Updating DSN params">
+      <created>1707257675344</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1707257675345</updated>
+    </task>
+    <option name="localTasksCounter" value="174" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -503,6 +502,7 @@
     <MESSAGE value="update Index title" />
     <MESSAGE value="Update documentation" />
     <MESSAGE value="Cleaning code" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cleaning code" />
+    <MESSAGE value="Updating DSN params" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updating DSN params" />
   </component>
 </project>
