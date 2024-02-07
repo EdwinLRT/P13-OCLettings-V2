@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Docker compose update">
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Update index.html">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -128,14 +128,7 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
       <workItem from="1706890889217" duration="803000" />
-      <workItem from="1707297018033" duration="3373000" />
-    </task>
-    <task id="LOCAL-00128" summary="Running some tests for deploy">
-      <created>1706874014513</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1706874014513</updated>
+      <workItem from="1707297018033" duration="3713000" />
     </task>
     <task id="LOCAL-00129" summary="Running some tests for deploy">
       <created>1706874196380</created>
@@ -473,14 +466,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707303204074</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="Update index.html">
+      <created>1707309435948</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1707309435948</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Setup Docker+circleCI" />
     <MESSAGE value="Setup docker" />
     <MESSAGE value="Setup CircleCI" />
     <MESSAGE value="Configure static files and add whitenoise" />
@@ -505,6 +504,7 @@
     <MESSAGE value="Patch var DSN params" />
     <MESSAGE value="Changing index title" />
     <MESSAGE value="Docker compose update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Docker compose update" />
+    <MESSAGE value="Update index.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update index.html" />
   </component>
 </project>
