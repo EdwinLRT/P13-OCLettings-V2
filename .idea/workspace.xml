@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Changing index title">
+    <list default="true" id="6e94bf89-cefc-442f-963c-b45e24d110fe" name="Changes" comment="Docker compose update">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,14 +128,7 @@
       <workItem from="1705006387180" duration="16650000" />
       <workItem from="1705617126178" duration="34750000" />
       <workItem from="1706890889217" duration="803000" />
-      <workItem from="1707297018033" duration="2059000" />
-    </task>
-    <task id="LOCAL-00127" summary="Running some tests for deploy">
-      <created>1706873406149</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1706873406149</updated>
+      <workItem from="1707297018033" duration="3373000" />
     </task>
     <task id="LOCAL-00128" summary="Running some tests for deploy">
       <created>1706874014513</created>
@@ -474,14 +466,20 @@
       <option name="project" value="LOCAL" />
       <updated>1707300808162</updated>
     </task>
-    <option name="localTasksCounter" value="176" />
+    <task id="LOCAL-00176" summary="Docker compose update">
+      <created>1707303204074</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1707303204074</updated>
+    </task>
+    <option name="localTasksCounter" value="177" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Test 80 ok - Sentry logs ok" />
     <MESSAGE value="Setup Docker+circleCI" />
     <MESSAGE value="Setup docker" />
     <MESSAGE value="Setup CircleCI" />
@@ -506,6 +504,7 @@
     <MESSAGE value="Updating DSN params" />
     <MESSAGE value="Patch var DSN params" />
     <MESSAGE value="Changing index title" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changing index title" />
+    <MESSAGE value="Docker compose update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Docker compose update" />
   </component>
 </project>
